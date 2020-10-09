@@ -1,10 +1,10 @@
 import sqlite3
 connection = sqlite3.connect('schule.db')
-cursur = connection.cursor()
+cursor = connection.cursor()
 
 # Daten in klasse erstellen
 sql = """INSERT INTO klasse (name) VALUES ("I1A"), ("I3A"), ("T1A"), ("T3A")"""
-cursur.execute(sql)
+cursor.execute(sql)
 connection.commit()
 
 # Daten in schueler erstellen
@@ -16,7 +16,7 @@ VALUES
 ("Carla", "Copf", 2),
 ("Dieter", "Darm", 4)
 """
-cursur.execute(sql)
+cursor.execute(sql)
 connection.commit()
 
 connection.close()
